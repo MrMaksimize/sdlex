@@ -28,7 +28,8 @@ exports.handle = (client) => {
     },
 
     prompt() {
-      client.addResponse('apology/untrained')
+      //client.addResponse('apology/untrained')
+      client.addResponse('provide_council_meeting/next')
       client.done()
     }
   })
