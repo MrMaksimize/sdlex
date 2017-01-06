@@ -88,8 +88,17 @@ exports.handle = (client) => {
 
         console.log('User wants the weather in:', city.value)
       }*/
-      
+
     },
+    prompt() {
+      let respData = {
+        'time/council_meeting_time': new Date().toString()
+      }
+
+      client.addResponse('provide_council_meeting/next', respData)
+    
+      client.done()
+    }
   })
 
   client.runFlow({
